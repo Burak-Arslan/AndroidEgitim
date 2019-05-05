@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.androidegitim.Activity.Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/save_user"
+            android:orientation="vertical"
+            android:padding="10dp"></LinearLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:hintTextAppearance="@style/HintText"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtKullaniciAdi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kullanıcı Adı"
+                app:hintTextAppearance="@style/HintText"
+                app:passwordToggleTint="@color/colorPrimaryDark" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:hintTextAppearance="@style/HintText"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtSifre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Şifre"
+                android:inputType="textPassword"
+                app:hintTextAppearance="@style/HintText"
+                app:passwordToggleTint="@color/colorPrimaryDark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:hintTextAppearance="@style/HintText"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtTelefon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefon"
+                app:hintTextAppearance="@style/HintText"
+                app:passwordToggleTint="@color/colorPrimaryDark" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Cinsiyet" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/spnCinsiyet"
+            android:layout_height="50dp"></Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnGirisYap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/buttonstyles"
+                android:text="Kayıt Ol" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
