@@ -91,7 +91,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnGirisYap"
+                android:id="@+id/btnKayit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"

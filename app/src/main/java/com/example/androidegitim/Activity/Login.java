@@ -51,13 +51,15 @@ public class Login extends AppCompatActivity {
                     try {
                         String kullaniciVarMi = "";
                         kullaniciVarMi = loginManager.GirisYap(edtKullaniciAdi.getText().toString(), edtSifre.getText().toString());
-                        if (kullaniciVarMi.isEmpty()) {
-                            Toasty.info(Login.this, "Kullanıcı Bulunamadı.\n Kayıt Syfasına Yönlendiriliyorsunuz.");
+                        if (kullaniciVarMi != null && kullaniciVarMi.equals("")) {
+                            Intent userList = new Intent(getApplicationContext(), UserList.class);
+                            getApplicationContext().startActivity(userList);
                             return;
+                        } else {
+                            Toasty.info(Login.this, "Kullanıcı Bulunamadı.\n Kayıt Syfasına Yönlendiriliyorsunuz.");
+                            Intent saveUserOpened = new Intent(getApplicationContext(), SaveUser.class);
+                            getApplicationContext().startActivity(saveUserOpened);
                         }
-                        Intent saveUserOpened = new Intent(getApplicationContext(), SaveUser.class);
-                        getApplicationContext().startActivity(saveUserOpened);
-
                     } catch (Exception ex) {
                         Toasty.error(getApplicationContext(), ex.getMessage());
                     }

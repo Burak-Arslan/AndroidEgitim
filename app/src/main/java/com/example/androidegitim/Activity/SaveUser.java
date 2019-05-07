@@ -81,6 +81,7 @@ public class SaveUser extends AppCompatActivity {
             edtSifre = findViewById(R.id.edtSifre);
             edtTelefonNumarasi = findViewById(R.id.edtTelefon);
             spnCinsiyet = findViewById(R.id.spnCinsiyet);
+            btnKayit = findViewById(R.id.btnKayit);
         } catch (Exception ex) {
             Toasty.error(getApplicationContext(), ex.getMessage());
         }
